@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+         
+  <table class="table table-bordered table-striped-coloumns">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Car Name</th>
+        <th scope="col">Car Color</th>
+        <th scope="col">Car Brand</th>
+        <th scope="col">Car Description</th>
+        <th scope="col">Car Price</th>
+
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of carData">
+       
+
+        <td>{{i.id}}</td>
+        <td>{{i.carname}}</td>
+        <td>{{i.carcolor}}</td>
+        <td>{{i.carbrand}}</td>
+        <td>{{i.cardescription}}</td>
+        <td>{{i.carprice}}</td>
+       
+
+      </tr>
+     
+    </tbody>
+  </table>
+
+        </div>
+    </div>
+</div>
+
+
