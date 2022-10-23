@@ -5,31 +5,31 @@
             <div class="row g-3">
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 <label for="" class="form-label">Car Name</label>
-<input type="text" placeholder="Enter the car name" class="form-control">
+<input type="text" placeholder="Enter the car name" name="carname" [(ngModel)]="carname" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Car Color</label>
-                    <input type="text" placeholder="Enter the car color" class="form-control">
+                    <input type="text" placeholder="Enter the car color" name="carcolor" [(ngModel)]="carcolor" class="form-control">
 
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Car Brand</label>
-                    <input type="text" placeholder="Enter the car brand" class="form-control">
+                    <input type="text" placeholder="Enter the car brand" name="carbrand" [(ngModel)]="carbrand" class="form-control">
 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Car Description</label>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Enter the car description" class="form-control"></textarea>
+                    <textarea name="cardescription" [(ngModel)]="cardescription" id="" cols="30" rows="10" placeholder="Enter the car description" class="form-control"></textarea>
 
 
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Car Price</label>
-                    <input type="text"  placeholder="Enter the car price" class="form-control">
+                    <input type="text"  placeholder="Enter the car price" name="carprice" [(ngModel)]="carprice" class="form-control">
 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-<button class="btn btn-success">Submit</button>
+<button class="btn btn-success" [disabled]="status" (click)="readValues()">Submit</button>
 
                 </div>
             </div>

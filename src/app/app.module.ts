@@ -7,7 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddcarComponent } from './addcar/addcar.component';
 import { ViewcarComponent } from './viewcar/viewcar.component';
 import { RouterModule, Routes } from '@angular/router';
-import { combineLatest } from 'rxjs';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 const appRoutes:Routes=[
@@ -15,7 +16,7 @@ const appRoutes:Routes=[
     path:"",component:AddcarComponent
   },
   {
-    path:"view",component:ViewcarComponent
+    path:"viewcar",component:ViewcarComponent
   }
   
 ]
@@ -29,7 +30,9 @@ const appRoutes:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+   HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
